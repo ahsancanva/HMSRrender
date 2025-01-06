@@ -1,0 +1,168 @@
+<%- include('../partials/simheader') -%>
+
+  <div class="sidebar close">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus'></i> -->
+      <i class="fa fa-hospital" aria-hidden="true"></i>
+
+      <span class="logo_name">.Hospital</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="/accountant/accountant_dashboard">
+          <i class='bx bx-grid-alt' ></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="/" href="/accountant/accountant_dashboard">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i class='bx bx-user-circle' ></i>
+            <span class="link_name">Profile</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Profile</a></li>
+          <li><a href="/accountant/profile">Profile</a></li>
+          <li><a href="/accountant/edit?id=<%=user._id%>">Edit</a></li>
+          <li><a href="/accountant/logout">LogOut</a></li>
+        </ul>
+      </li>
+       <li>
+        <div class="iocn-link">
+          <a href="/accountant/user_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span class="link_name">User</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">User</a></li>
+          <li><a href="/accountant/user_list">User List</a></li>
+          <li><a href="/accountant/user_add">Add_new</a></li>
+          <li><a href="/accountant/user_export">Export User</a></li>
+        </ul>
+      </li>
+ 
+
+      <li>
+        <div class="iocn-link">
+          <a href="/accountant/accountant_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-university" aria-hidden="true"></i>
+            <span class="link_name">Accountants</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Accountants</a></li>
+          <li><a href="/accountant/department">Add_new</a></li>
+          <li><a href="/accountant/accountant_list">Accountants List</a></li>
+          <li><a href="/accountant/accountant_export">Export Accountants</a></li>
+        </ul>
+      </li>
+
+
+      <li>
+        <div class="iocn-link">
+          <a href="/accountant/newinvoice_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-university" aria-hidden="true"></i>
+            <span class="link_name">New Invoice</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">New Invoice</a></li>
+          <li><a href="/accountant/newinvoice">Add_new</a></li>
+          <li><a href="/accountant/newinvoice_list">Newinvoice List</a></li>
+          <li><a href="/accountant/newinvoice_export">Export Newinvoice</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a href="/accountant/newinvoice_list">
+            <!-- <i class="fa fa-university" aria-hidden="true"></i> -->
+            <i class="fa fa-eye" aria-hidden="true"></i>
+            <span class="link_name">View Payment</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">View Payment</a></li>
+          <li><a href="/accountant/newinvoice">Add_new</a></li>
+          <li><a href="/accountant/newinvoice_list">View Payment List</a></li>
+          <li><a href="/accountant/newinvoice_export">Export View Payment</a></li>
+        </ul>
+      </li>
+
+
+      <li>
+        <a href="#">
+          <i class='bx bx-lock-alt' ></i>
+          <span class="link_name">Terms & Conditions </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Terms & Conditions </a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">History</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog' ></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/accountant/logout">
+          <i class='bx bx-log-out' ></i>
+          <span class="link_name">LogOut</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="/accountant/logout">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+    <div class="profile-details">
+      <div class="profile-content">
+        <img src="/image/<%=user.image%>" alt="profileImg">
+      </div>
+      <div class="name-job">
+        <div class="profile_name"><%=user.name%></div>
+        <div class="job">.Hospital</div>
+      </div>
+      <a href="/accountant/logout">
+        <i class='bx bx-log-out' ></i>
+      </a>
+    </div>
+  </li>
+</ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu' ></i>
+      <!-- <span class="text">Drop Down Sidebar</span> -->
+    </div>
+  </section>
+
+
+
+
+<%- include('../partials/simfooter') -%>

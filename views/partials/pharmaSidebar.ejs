@@ -1,0 +1,155 @@
+<%- include('../partials/pharmasimheader') -%>
+
+  <div class="sidebar close">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus'></i> -->
+      <i class="fa fa-hospital" aria-hidden="true"></i>
+
+      <span class="logo_name">.Hospital</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="/pharma/pharma_dashboard">
+          <i class='bx bx-grid-alt'></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="/" href="/pharma/pharma_dashboard">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i class='bx bx-user-circle'></i>
+            <span class="link_name">Profile</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Profile</a></li>
+          <li><a href="/pharma/profile">Profile</a></li>
+          <li><a href="/pharma/edit?id=<%=user._id%>">Edit</a></li>
+          <li><a href="/pharma/logout">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/pharma/user_list">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span class="link_name">User</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">User</a></li>
+          <li><a href="/pharma/user_list">User List</a></li>
+          <li><a href="/pharma/user_add">Add_new</a></li>
+          <li><a href="/pharma/user_export">Export User</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/pharma/medicine_list">
+            <i class="fa fa-universal-access" aria-hidden="true"></i>
+            <span class="link_name">Medicine</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Medicine</a></li>
+          <li><a href="/pharma/medicine">Add_new</a></li>
+          <li><a href="/pharma/medicine_list">Medicine List</a></li>
+          <li><a href="/pharma/medicine_export">Export Medicine</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/pharma/pharmacist_list">
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <span class="link_name">Pharmacists</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Pharmacist</a></li>
+          <li><a href="/pharma/department">Add_new</a></li>
+          <li><a href="/pharma/pharmacist_list">Pharmacists List</a></li>
+          <li><a href="/pharma/pharmacist_export">Export Pharmacists</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/pharma/logout">
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <span class="link_name">LogOut</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="/pharma/logout">LogOut</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-lock-alt'></i>
+          <span class="link_name">Terms & Conditions </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Terms & Conditions </a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">History</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/pharma/logout">
+          <i class='bx bx-log-out'></i>
+          <span class="link_name">LogOut</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="/pharma/logout">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="/image/<%=user.image%>" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">
+              <%=user.name%>
+            </div>
+            <div class="job">.Hospital</div>
+          </div>
+          <a href="/pharma/logout">
+            <i class='bx bx-log-out'></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu'></i>
+      <!-- <span class="text">Drop Down Sidebar</span> -->
+    </div>
+  </section>
+
+
+
+
+  <%- include('../partials/pharmasimfooter') -%>

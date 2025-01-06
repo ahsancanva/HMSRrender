@@ -1,0 +1,38 @@
+<%- include('../partials/accountantheader') -%>
+    <div class="container p-5 ">
+        <h1>Forget password</h1>
+        <div class="col-8 m-auto">
+            <form action="" method="post">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+               
+
+                <button type="submit" value="register" class="btn btn-primary w-100">Reset password</button>
+
+                <!-- <a href="/forget"  class="btn btn-primary w-100">forget password</a> -->
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+  
+    <%
+    if(typeof message !== 'undefined'){
+        %>
+        <div class="container">
+            <div class="col-6 w-50" style="margin: 10px auto;">
+                <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;"><%= message %></p>
+            </div>
+        </div>
+        <%
+    }
+    %>
+
+    <%- include('../partials/accountantfooter') -%>

@@ -1,0 +1,120 @@
+<%- include('../partials/adminsimheader') -%>
+
+  <div class="contain">
+    <div class="row">
+      <div class="col-3">
+        <%- include('../partials/adminSidebar') -%>
+      </div>
+      <div class="col-8">
+        <form action="/admin/opd" method="post"  style="border:1px solid #ccc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                <h1 style="color: rgb(6, 6, 65); font-size: 30px; font-weight: 600; margin-bottom:15px; text-align:center;">Hopital OPD Form</h1>
+                <p style="text-align: center;" > Fill Up The Form</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 style="color: rgb(6, 6, 65); font-size: 25px; font-weight: 600; margin-bottom:15px; margin-top: 1rem; text-align: left;">General Information</h1>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Enter Name " name="name" required>            
+                    </div>
+                    <div class="col-6">
+                        <label for="date"><b>DOB</b></label>
+                        <input type="date" placeholder="Enter Date " name="date"style=" margin-bottom:10px; background-color: #F5F5F5; width: 100%;" required>  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <label for="address"><b>Address</b></label>
+                            <input type="text" placeholder="Enter address " name="address" required> 
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="name"><b>F/Spouse</b></label>
+                        <input type="text" placeholder="Enter Name " name="fathername" required>            
+                    </div>
+                    <div class="col-6">
+                        <label for="id_card"><b>CNIC</b></label>
+                        <input type="text" placeholder="Enter CNIC " name="id_card" required>            
+                    </div>  
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" placeholder="Enter Email" name="email" required>
+                    </div>
+                    <div class="col-6">
+                        <label for="mobile"><b>Mobile</b></label>
+                        <input type="text" placeholder="Enter Mobile  " name="mobile" required> 
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                      <label for="cars"><b>Clinic</b></label>
+                      <select name="clinic" id="cars" style="background-color: #F5F5F5; width: 100%;">
+                        <!-- <option value="null"></option> -->
+                        <option value="medicine">Medicine</option>
+                        <option value="Primary care clinics"> Primary care clinics</option>
+                        <option value="Dermatology">Dermatology</option>
+                        <option value="Ophthalmology">Ophthalmology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                        <option value=" Physical therapy"> Physical therapy</option>
+                        <option value="Retail clinics">Retail clinics</option>
+                      </select>
+                      <br><br>
+                    </div>
+                  </div>
+
+                    <div class="row">
+                        <!-- <div class="col-4">
+                            <label for="clinic"><b>Clinic</b></label>
+                            <input type="text" placeholder="Enter clinic " name="clinic" required>            
+                        </div> -->
+                        <div class="col-6">
+                            <label for="visit"><b>Visit</b></label>
+                            <input type="text" placeholder="Enter visit" name="visit" required>  
+                        </div>
+                        <div class="col-6">
+                            <label for="education"><b>Education</b></label>
+                            <input type="text" placeholder="Enter education " name="education" required>  
+                        </div>
+                    </div>
+
+                      <div class="row">
+                        <div class="col-12">
+                            <div class="clearfix">
+                              <button type="submit" class="signupbtn w-100">Submit</button>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <% if(typeof message !=='undefined' ){ %>
+    <div class="container">
+      <div class="col-8 w-50" style="margin: 10px auto;">
+        <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+          <%= message %>
+        </p>
+      </div>
+    </div>
+    <% } %>
+
+      <%- include('../partials/adminsimfooter') -%>

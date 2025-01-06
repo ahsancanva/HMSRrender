@@ -1,0 +1,146 @@
+<%- include('../partials/doctorsimheader') -%>
+
+    <div class="contianer">
+        <div class="row">
+            <div class="col-3">
+                <%- include('../partials/doctorSidebar') -%>
+            </div>
+
+            <div class="col-8 ">
+                <div class="col-12">
+                    <%- include('../partials/doctor_navbar') -%>
+                </div>
+                <div class="col-12" id="user_list">
+
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-6 d-flex justify-content-start align-items-center">
+                                <!-- <a class="btn btn-sm btn-primary w-25 mb-5" href="/doctor/department">Add New</a> -->
+                            </div>
+                            <div class="col-6">
+                                <form class="d-flex" id="search" role="search">
+                                    <input class="form-control " type="search" name="search" placeholder="Search" aria-label="Search">
+                                    <button class="sbtn" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="col-12">
+                                    <table width="100%">
+                                        <tr>
+                                            <th>Image</th>
+                                            <th>Name</th>
+                                            <th>Department</th>
+                                            <th>Gender</th>
+                                            <th>Email</th>
+                                            <th>Mobile</th>
+                                            <th>Verified</th>
+                                            <th>Action</th>
+
+
+                                        </tr>
+                                        <!-- <tr> -->
+                                        <% if(user.length> 0){ %>
+
+                                            <% for (var i=0; i < user.length ; i++) { %>
+                                                <tr>
+
+                                                    <td>
+                                                        <img src="/image/<%= user[i].image %>" class="img-fluid "
+                                                            alt="<%= user[i].image %>"
+                                                            style="width:40px; border-radius: 5px;">
+                                                    </td>
+                                                    <td>
+                                                        <%= user[i].name %>
+                                                    </td>
+                                                    <td>
+                                                        <%= user[i].department %>
+                                                    </td>
+                                                    <td>
+                                                        <% if(user[i].gender==1){ %>
+                                                            <p >Male</p>
+                                                            <% } else{ %>
+                                                                <p>Female</p>
+    
+                                                                <% } %>
+                                                    </td>
+                                                    <td>
+                                                        <%= user[i].email %>
+                                                    </td>
+                                                    <td>
+                                                        <%= user[i].mobile %>
+                                                    </td>
+                                                    <td>
+                                                        <% if(user[i].is_verified==1){ %>
+                                                            <p style="color: green;">Verified</p>
+                                                            <% } else{ %>
+                                                                <p style="color: red;">Not Verified</p>
+
+                                                                <% } %>
+                                                    </td>
+                                                    <td>
+                                                        <!-- <a style="margin-right: 10px; background-color: green; "
+                                                            class="sbtn"
+                                                            href="/doctor/pharmacist_edit?id=<%= user[i]._id %>">Edit</a>
+                                                        <a class="sbtn"
+                                                            href="/doctor/pharmacist_delete?id=<%= user[i]._id %>">Delete</a>
+                                                    -->
+                                                            <a class="sbtn"  style="background-color: rgb(28, 0, 128); "
+                                                            href="/doctor/pharmacist_view?id=<%= user[i]._id %>">View</a>
+                                                   
+                                                   
+                                                        </td>
+
+
+
+
+                                                </tr>
+                                                <% } %>
+                                                    <% } else{ %>
+                                                        <tr>
+                                                            <td colspan="5">
+                                                                <h1 class="p-5">UserNotFound</h1>
+                                                            </td>
+                                                        </tr>
+                                                        <% } %>
+                                                            </tr>
+
+
+                                    </table>
+                                    <% for(let j=1; j <=totalPages; j++){ %>
+                                        <!-- <a class="" href="?page=<%= j %>"><%= j %></a> -->
+
+                                        <% } %>
+
+                                            <br>
+                                            <br>
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination">
+                                                    <li class="page-item"><a class="page-link"
+                                                            href="?page=<%=previous%>">Previous</a></li>
+                                                    <li class="page-item"><a class="page-link" href="?page=1">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="?page=2">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="?page=3">3</a></li>
+                                                    <li class="page-item"><a class="page-link"
+                                                            href="?page=<%=next%>">Next</a></li>
+                                                </ul>
+                                            </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <%- include('../partials/doctorsimfooter') -%>

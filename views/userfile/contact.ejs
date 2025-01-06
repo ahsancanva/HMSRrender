@@ -1,0 +1,144 @@
+<%- include('../partials/header') -%>
+
+
+
+
+    <!-- contact page top banner -->
+    <section class="contact-banner">
+        <div class="content">
+            <h1>#let's_talk</h1>
+            <p>LEAVE A MESSAGE. we love to hear from your!</p>
+        </div>
+    </section>
+
+
+
+    <!-- map section start -->
+
+    <section class="contact">
+        <div class="contact-container">
+
+            <div class="content">
+                <h3>GET IN TOUCH</h3>
+                <h1>Visit One Of Our Hospital Locations Or Contact Us Today</h1>
+                <h3>Head Office</h3>
+
+                <p>
+                    <strong><i class="fa fa-map-marker" aria-hidden="true"></i></strong>
+                    10808 S River Front Pkwy # 3130 Lhore, UT 84095 Pakistan
+                </p>
+
+                <p>
+                    <strong><i class="fa fa-envelope-open" aria-hidden="true"></i></strong>
+                    ahsan@gmail.com/codewithahsan@gmail.com
+                </p>
+
+                <p>
+                    <strong><i class="fa fa-phone" aria-hidden="true"></i></strong>
+                    +9245678567/(+92)456778899
+                </p>
+
+                <p>
+                    <strong><i class="fa fa-clock" aria-hidden="true"></i></strong>
+                    24/7
+                </p>
+
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27479.201665598703!2d73.81954299836426!3d30.580362375099455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3917f533050f2d17%3A0x53427eb5f4810c79!2sBas%C4%ABrpur%2C%20Okara%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1676176603254!5m2!1sen!2s"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- contact form section start -->
+
+    <section class="form">
+        <h1 class="heading" style="padding-bottom: 3.5rem;">
+            <p>CONTACT US</p>
+        </h1>
+
+        <div class="form-container">
+
+            <div class="form-box">
+                <h3>LEAVE A MESSAGE</h3>
+                <h1>We love to hear form your</h1>
+                <form action="/contact" method="post">
+                    <div class="inputtype">
+                        <input type="text" name="name" placeholder="Your Name">
+                    </div>
+                    <div class="inputtype">
+                        <input type="email" name="email" placeholder="Your Email">
+                    </div>
+                    <div class="inputtype">
+                        <input type="text" name="subject" placeholder="Your Subject">
+                    </div>
+                    <div class="message">
+                        <textarea name="message" placeholder="Your message" id="" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="inputbtn">
+                        <button type="submit">Contact</button>
+                        <!-- <input class="inputtypebtn" type="button" value="Submit"> -->
+                    </div>
+                </form>
+                <% if(typeof message !=='undefined' ){ %>
+                    <div class="container">
+                        <div class="col-6 w-50" style="margin: 10px auto;">
+                            <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+                                <%= message %>
+                            </p>
+                        </div>
+                    </div>
+                    <% } %>
+
+            </div>
+
+
+            <div class="owner-contact">
+
+                <div class="box">
+                    <img src="/image/people/1.png" alt="">
+                    <div class="content">
+                        <h3>Johen Doe</h3>
+                        <p><strong>Phone: </strong> +000 876 54321</p>
+                        <p><strong>Email: </strong> johenDev@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="/image/people/2.png" alt="">
+                    <div class="content">
+                        <h3>Johen Doe</h3>
+                        <p><strong>Phone: </strong> +000 876 54321</p>
+                        <p><strong>Email: </strong> johenDev@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="/image/people/3.png" alt="">
+                    <div class="content">
+                        <h3>Johen Doe</h3>
+                        <p><strong>Phone: </strong> +000 876 54321</p>
+                        <p><strong>Email: </strong> johenDev@gmail.com</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+    <%- include('../partials/footer') -%>

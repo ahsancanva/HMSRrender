@@ -1,0 +1,179 @@
+<%- include('../partials/adminsimheader') -%>
+
+  <div class="contain">
+    <div class="row">
+      <div class="col-3">
+        <%- include('../partials/adminSidebar') -%>
+      </div>
+      <div class="col-8">
+        <form action="/admin/emergency" method="post" enctype="multipart/form-data" style="border:1px solid #ccc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                <h1 style="color: rgb(6, 6, 65); font-size: 30px; font-weight: 600; margin-bottom:15px; text-align:center;">Emergency Admission Form</h1>
+                <p style="text-align: center;" >Please Fill Up The Form</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h1 style="color: rgb(6, 6, 65); font-size: 25px; font-weight: 600; margin-bottom:15px; margin-top: 1rem; text-align: left;">General Information</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="date"><b>Date</b></label>
+                        <input type="date" placeholder="Enter Date " name="date"style=" margin-bottom:10px; background-color: #F5F5F5; width: 100%;" required>  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Enter Name " name="name" required>            
+                    </div>
+                    <div class="col-4">
+                        <label for="lastname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name " name="lastname" required>   
+                    </div>
+                    <div class="col-4">
+                        <label for="id_card"><b>ID_Card</b></label>
+                        <input type="text" placeholder="Enter ID_Card " name="id_card" required>   
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="image"><b>Image</b></label>
+                        <input type="file" name="image" required>
+                    </div>
+                    <div class="offset-1 col-5">
+                        <br>
+                        <label for="image"><b>Gender:</b></label>
+                        <br>
+                        <label for="">male</label>
+                        <input type="radio" name="gender" value="Male">
+                        <label for="">female</label>
+                        <input type="radio" name="gender" value="Female">
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                <h1 style="color: rgb(6, 6, 65); font-size: 25px; font-weight: 600; margin-bottom:15px;margin-top: 1rem; text-align: left;">Contact Information</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" placeholder="Enter Email" name="email" required>
+                    </div>
+                    <div class="col-4">
+                        <label for="mobile"><b>Mobile</b></label>
+                        <input type="text" placeholder="Enter Mobile  " name="mobile" required> 
+                    </div>
+                    <div class="col-4">
+                        <label for="relation"><b>Relation</b></label>
+                        <input type="text" placeholder="Enter relation " name="relation" required> 
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="col-12">
+                            <label for="address"><b>Address</b></label>
+                            <input type="text" placeholder="Enter address " name="address" required> 
+                        </div>
+                    </div>
+                </div>
+                   
+                <h1 style="color: rgb(6, 6, 65); font-size: 25px; font-weight: 600; margin-bottom:15px; margin-top: 1rem; text-align: left;">Vital Sign</h1>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="blood_pressure"><b>Blood_pressure</b></label>
+                            <input type="text" placeholder="Enter blood_pressure " name="blood_pressure" required>  
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="heart_rate"><b>Heart_rate</b></label>
+                            <input type="text" placeholder="Enter heart_rate " name="heart_rate" required>            
+                        </div>
+                        <div class="col-4">
+                            <label for="respiratory_rate"><b>Respiratory Rate</b></label>
+                            <input type="text" placeholder="Enter Respiratory Rate" name="respiratory_rate" required>  
+                        </div>
+                        <div class="col-4">
+                            <label for="temperature"><b>Temperature</b></label>
+                            <input type="text" placeholder="Enter Temperature " name="temperature" required>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="oxigen"><b>Oxigen</b></label>
+                            <input type="text" placeholder="Enter Oxigen " name="oxigen" required>            
+                        </div>
+                        <div class="col-4">
+                            <label for="height"><b>Height</b></label>
+                            <input type="text" placeholder="Enter Height " name="height" required>  
+                        </div>
+                        <div class="col-4">
+                            <label for="weight"><b>Weight</b></label>
+                            <input type="text" placeholder="Enter Weight" name="weight" required>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                    <h1 style="color: rgb(6, 6, 65); font-size: 25px; font-weight: 600; margin-bottom:15px; margin-top: 1rem; text-align: left;">Diease / Medical History</h1>
+    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="death"><b>Emergency Case Death</b></label>
+                            <input type="text" placeholder="Enter yes / No " name="death" required>            
+                        </div>
+                        <div class="col-6">
+                            <label for="bed_no"><b>Bed_no</b></label>
+                            <input type="text" placeholder="Enter bed_no " name="bed_no" required>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <label for="cars">Alergies</label>
+                          <select name="alergies" id="cars" style="background-color: #F5F5F5; width: 100%;">
+                            <!-- <option value="null"></option> -->
+                            <option value="drug">Drug </option>
+                            <option value="food">Food </option>
+                            <option value="latex">latex </option>
+                            <option value="Other">Other</option>
+                          </select>
+                          <br><br>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12">
+                            <div class="clearfix">
+                              <button type="submit" class="signupbtn w-100">Submit</button>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <% if(typeof message !=='undefined' ){ %>
+    <div class="container">
+      <div class="col-8 w-50" style="margin: 10px auto;">
+        <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+          <%= message %>
+        </p>
+      </div>
+    </div>
+    <% } %>
+
+
+      <%- include('../partials/adminsimfooter') -%>
+

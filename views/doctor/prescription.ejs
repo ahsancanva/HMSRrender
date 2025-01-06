@@ -1,0 +1,171 @@
+<%- include('../partials/doctorsimheader') -%>
+
+
+  <div class="contain">
+    <div class="row">
+
+      <div class="col-3">
+    
+        <%- include('../partials/doctorSidebar') -%>
+
+      </div>
+
+      <div class="col-9">
+
+     <form action="/doctor/prescription" method="post" style="border:1px solid #ccc">
+          <div class="container" style="border: none; background-color: white;">
+   
+            <div class="row ">
+              <div class="col-2">
+                  <h1>
+                      <img class="logo" src="/image/home/logo.svg" style="width: 120px;" alt="">
+              
+                    </h1>
+              </div>
+              <div class="col-10 mt-4">
+                  <p style="font-size: 9px; text-align: right; line-height: 6px;"><b>MocDoc Hospital</b></p>
+                  <p style="font-size: 9px; text-align: right; line-height: 6px;"><b>Street 23, gulshan iqbal Lahore</b></p>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-12">
+                  <p style="border-top: 1px solid rgba(0,0,0,0.5);"></p>
+              </div>
+          </div>
+
+            <div class="contain">
+
+              <div class="row mt-3 mb-3">
+                <div class="col-3">
+                  <img src="/image/barcode/barcode.png" style="height: 60px; width: 160px;" alt="">
+                </div>
+                <div class="col-6">
+                 <!-- <label for="name"><b>name</b></label> -->
+                 <input type="text" placeholder="Enter name" name="name" required style="margin-bottom: -1px;">
+                <!-- </div> -->
+                <!-- <div class="col-6"> -->
+                 <!-- <label for="id_card"><b>CNIC</b></label> -->
+                 <input type="text" placeholder="Enter CNIC" name="id_card" required style="margin-bottom: -1px;">
+                <!-- </div> -->
+                <!-- <div class="col-6"> -->
+                <!-- <label for="address"><b>Address</b></label> -->
+                 <input type="text" placeholder="Enter Address" name="address" required style="margin-bottom: -1px;">
+               </div>
+              </div>
+              <div class="row mt-3 mb-3" >
+                <div class="col-6">
+                   <label for="fathername"><b>F/Spouse:</b></label>
+                   <input type="text" placeholder="Enter name" name="fathername" required>
+                    <!-- </div> -->
+                    <!-- <div class="col-6"> -->
+                    <label for="mobile"><b>Mobile</b></label>
+                    <input type="text" placeholder="Enter mobile" name="mobile" required>
+                     <!-- </div> -->
+                    <!-- <div class="col-6"> -->
+                     <label for="Email"><b>Email</b></label>
+                     <input type="email" placeholder="Enter Eamil" name="email" required>
+                </div>
+                <div class="col-6">
+                  <label for="clinic"><b>Clinic:</b></label>
+                  <div class="col-12">
+                    <select name="clinic" id="cars" style="background-color: #F5F5F5; width: 100%; padding-bottom: -10px; margin-bottom: -10px;">
+                      <!-- <option value="null"></option> -->
+                      <option value="medicine">Medicine</option>
+                      <option value="Primary care clinics"> Primary care clinics</option>
+                      <option value="Dermatology">Dermatology</option>
+                      <option value="Ophthalmology">Ophthalmology</option>
+                      <option value="Orthopedics">Orthopedics</option>
+                      <option value=" Physical therapy"> Physical therapy</option>
+                      <option value="Retail clinics">Retail clinics</option>
+                    </select>
+                  </div>
+                   <!-- </div> -->
+                   <!-- <div class="col-6"> -->
+                   <label for="visit"><b>Visit</b></label>
+                   <input type="text" placeholder="Enter Visit" name="visit" required>
+                    <!-- </div> -->
+                   <!-- <div class="col-6"> -->
+                    <label for="education"><b>Education</b></label>
+                    <input type="text" placeholder="Enter education" name="education" required>
+               </div>
+              </div>
+              <div class="row" style="border: 1px solid rgba(0,0,0,0.5);">
+                <div class="offset-1 col-2 pt-3">
+                    <p style="text-align: left; font-size: 9px;"><b>Temp(FC)</b></p>
+                </div>
+                <div class="col-2 pt-3">
+                    <p style="text-align: left; font-size: 9px;"><b>B.P(MmHg)</b></p>
+                </div>
+                <div class="col-2 pt-3">
+                    <p style="text-align: left; font-size: 9px;"><b>Pulse</b></p>
+                </div>
+                <div class="col-2 pt-3">
+                    <p style="text-align: left; font-size: 9px;"><b>Weight(KG)</b></p>
+                </div>
+                <div class="col-2 pt-3">
+                    <p style="text-align: left; font-size: 9px;"><b>Height(Inch)</b></p>
+                </div>
+            </div>
+              <div class="row mt-3 mb-3">
+                <div class="col-6">
+                  <label for="mobile"><b>Presenting Complaints:</b></label>
+                  <textarea name="complaints" id="" cols="30" rows="5" class="w-100" style="background-color: #f0f0f0; font-size: 10px;"></textarea>
+                </div>
+                <div class="col-6">
+                  <label for="email"><b>History:</b></label>
+                  <textarea name="history" id="" cols="30" rows="5" class="w-100" style="background-color: #f0f0f0; font-size: 10px;"></textarea>
+                </div>
+              </div>
+              <div class="row mt-3 mb-3">
+                <div class="col-6">
+                  <label for="mobile"><b>Examination:</b></label>
+                  <textarea name="examination" id="" cols="30" rows="5" class="w-100" style="background-color: #f0f0f0; font-size: 10px;"></textarea>
+                </div>
+                <div class="col-6">
+                  <label for="email"><b>Treatment:</b></label>
+                  <textarea name="treatment" id="" cols="30" rows="5" class="w-100" style="background-color: #f0f0f0; font-size: 10px;"></textarea>
+                </div>
+              </div>
+
+              <div class="row mt-5">
+                  <div class="col-12">
+                    <label for="date"><b>date</b></label>
+                    <input type="date" placeholder="Enter date" name="date" required style="background-color: #f0f0f0; width: 100%;">
+                  </div>
+              </div>
+            </div>
+            <br>
+            <div class="clearfix">
+              <button type="submit" class="signupbtn w-100">Submit</button>
+            </div>
+          </div>
+        </form> 
+
+
+   
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <% if(typeof message !=='undefined' ){ %>
+    <div class="container">
+      <div class="col-8 w-50" style="margin: 10px auto;">
+        <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+          <%= message %>
+        </p>
+      </div>
+    </div>
+    <% } %>
+
+      <%- include('../partials/doctorsimfooter') -%>

@@ -1,0 +1,66 @@
+<%- include('../partials/labsimheader') -%>
+
+  <div class="contain">
+    <div class="row">
+      <div class="col-3">
+        <%- include('../partials/labSidebar') -%>
+
+      </div>
+      <div class="col-6">
+        <form action="" method="post" style="border:1px solid #ccc">
+          <div class="container" style="border: none;">
+            <h1>Edit Blood Donor</h1>
+            <p>Please fill in this form to create an Blood Donor.</p>
+            <hr>
+            <label for="name"><b>Name</b></label>
+            <input type="text"  value="<%=user.name%>" placeholder="Enter Name" name="name" required>
+            <br>
+            <label for="mobile"><b>Mobile</b></label>
+            <input type="text"  value="<%=user.mobile%>" placeholder="Enter Mobile No" name="mobile" required>
+            <br>
+            <div class="col-12">
+                <label for="">male</label>
+                <input type="radio" name="gender" value="1">
+                <label for="">female</label>
+                <input type="radio" name="gender" value="0">
+              </div>
+              <br>
+              <br>
+              <label for="age"><b>age</b></label>
+              <input type="text" value="<%=user.age%>" placeholder="Enter age" name="age" required>
+
+            <label for="blood_group"><b>Blood Group</b></label>
+            <input type="text" value="<%=user.blood_group%>" placeholder="Enter Name" name="blood_group" required>
+
+            <label for="no_bag"><b>No of Bag</b></label>
+            <input type="text" value="<%=user.no_bag%>" placeholder="Enter No Of Bag" name="no_bag" required>
+
+            <br>
+            <label for="donation_date"><b>donation_Date</b></label>
+            <input type="date" value="<%=user.donation_date%>" name="donation_date" required style="width: 100%; background-color: #ccc; padding: 10px 20px;" >
+            <br>
+            <br>
+            <div class="col-md-12">
+                <input type="hidden" name="user_id" value="<%=user._id%>">
+            </div>
+            <div class="clearfix">
+              <button type="submit" class="signupbtn w-100">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <% if(typeof message !=='undefined' ){ %>
+    <div class="container">
+      <div class="col-8 w-50" style="margin: 10px auto;">
+        <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+          <%= message %>
+        </p>
+      </div>
+    </div>
+    <% } %>
+
+      <%- include('../partials/labsimfooter') -%>

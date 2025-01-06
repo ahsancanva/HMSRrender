@@ -1,0 +1,333 @@
+<%- include('../partials/receptionsimheader') -%>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Pinyon+Script|Rochester');
+
+.cursive {
+  font-family: 'Pinyon Script', cursive;
+}
+
+.sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.block {
+  display: block;
+}
+
+.underline {
+  border-bottom: 1px solid #777;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.padding-0 {
+  padding: 0;
+}
+
+.pm-empty-space {
+  height: 40px;
+  width: 100%;
+}
+
+body {
+  padding: 20px 0;
+  background: #ccc;
+}
+
+.pm-certificate-container {
+  position: relative;
+  width: 800px;
+  height:810px;
+  background-color: #618597;
+  padding: 30px;
+  color: #333;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+  /*background: -webkit-repeating-linear-gradient(
+    45deg,
+    #618597,
+    #618597 1px,
+    #b2cad6 1px,
+    #b2cad6 2px
+  );
+  background: repeating-linear-gradient(
+    90deg,
+    #618597,
+    #618597 1px,
+    #b2cad6 1px,
+    #b2cad6 2px
+  );*/
+  
+  .outer-border {
+    width: 750px;
+    height: 755px;
+    position: absolute;
+    left: 50%;
+    margin-left: -375px;
+    top: 36%;
+    margin-top:-270px;
+    border: 2px solid #fff;
+  }
+  
+  .inner-border {
+    width: 730px;
+    height: 715px;
+    position: absolute;
+    left: 50%;
+    margin-left: -365px;
+    top: 37%;
+    margin-top:-265px;
+    border: 2px solid #fff;
+  }
+
+  .pm-certificate-border {
+    position: relative;
+    width: 723px;
+    height: 700px;
+    padding: 0;
+    border: 1px solid #E1E5F0;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: none;
+    left: 50%;
+    margin-left: -360px;
+    top: 36%;
+    margin-top: -260px;
+
+    .pm-certificate-block {
+      width: 650px;
+      height: 200px;
+      position: relative;
+      left: 50%;
+      margin-left: -325px;
+      top: 70px;
+      margin-top: 0;
+    }
+
+    .pm-certificate-header {
+      margin-bottom: 10px;
+    }
+
+    .pm-certificate-title {
+      position: relative;
+      top: 40px;
+
+      h2 {
+        font-size: 34px !important;
+      }
+    }
+
+    .pm-certificate-body {
+      padding: 20px;
+
+      .pm-name-text {
+        font-size: 20px;
+      }
+    }
+
+    .pm-earned {
+      margin: 15px 0 20px;
+      .pm-earned-text {
+        font-size: 20px;
+      }
+      .pm-credits-text {
+        font-size: 15px;
+      }
+    }
+
+    .pm-course-title {
+      .pm-earned-text {
+        font-size: 20px;
+      }
+      .pm-credits-text {
+        font-size: 15px;
+      }
+    }
+
+    .pm-certified {
+      font-size: 12px;
+
+      .underline {
+        margin-bottom: 5px;
+      }
+    }
+
+    .pm-certificate-footer {
+      width: 650px;
+      height: 100px;
+      position: relative;
+      left: 50%;
+      margin-left: -325px;
+      bottom: -105px;
+    }
+  }
+}
+
+</style>
+    <div class="contain">
+        <div class="row">
+
+            <div class="col-3">
+
+                <%- include('../partials/receptionSidebar') -%>
+
+            </div>
+
+            <div class="col-2 mt-3 profile">
+
+                <picture>
+                <!-- <img src="/image/<%=user.image%>" class="img-fluid img-thumbnail" alt="<%=user.image%>"> -->
+                </picture>
+                <h3 class="">
+                    <%=user.patient_name%>
+                </h3>
+                <p class="">
+                    <%=user.email%>
+                </p>
+                <p class="">
+                    <% if(user.is_verified==1){ %>
+                        <p>Verified : true</p>
+                        <% } %>
+                </p>
+                <p>
+                    <% if(user.status==1){ %>
+                        <p style="color: green;" >Success</p>
+                        <% } else{ %>
+                            <p style="color: red;">Failed</p>
+
+                            <% } %>
+                        </p>
+                <div class="button">
+                    <a href="/reception/birth_report_edit?id=<%=user._id%>" class="sbtn">Edit</a>
+                    <a href="/reception/logout" class="sbtn">Logout</a>
+                    <br>
+                    <a href="" onclick="window.print()" class="sbtn mb-5" > Print.</a>
+
+
+                </div>
+                <div class="social">
+                    <box-icon type='logo' name='facebook-square'></box-icon>
+                    <box-icon type='logo' name='instagram'></box-icon>
+                    <box-icon type='logo' name='linkedin-square'></box-icon>
+                    <box-icon type='logo' name='twitter'></box-icon>
+                </div>
+
+            </div>
+
+            <div class="col-7 aboutme">
+                <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <div class="container pm-certificate-container">
+          <div class="outer-border"></div>
+          <div class="inner-border"></div>
+          
+          <div class="pm-certificate-border col-xs-12">
+            <div class="row pm-certificate-header">
+              <div class="pm-certificate-title cursive col-xs-12 text-center">
+                <h1 style="text-align: center;">
+                    <img class="logo" src="/image/home/logo.svg" style="width: 120px;" alt="">
+            
+                  </h1>
+                <h2 style="text-align: center;"><b>MocDoc Hospital</b></h2>
+                <p style="text-align: center;">Street 23, gulshan iqbal Lahore</p>
+              </div>
+            </div>
+      
+            <div class="row pm-certificate-body">
+              
+              <div class="pm-certificate-block">
+                  <div class="col-xs-12">
+                    <div class="row">
+                      <div class="col-xs-2"><!-- LEAVE EMPTY --></div>
+                      <div class="pm-certificate-name underline margin-0 col-xs-8 text-center">
+                        <span class="pm-name-text bold">Birth Certificate</span>
+                      </div>
+                      <div class="col-xs-2"><!-- LEAVE EMPTY --></div>
+                    </div>
+                  </div>          
+      
+                  <div class="col-xs-12">
+                    <div class="row">
+                      <div class="col-xs-2"><!-- LEAVE EMPTY --></div>
+                      <div class="pm-earned col-xs-8 text-center">
+                        <span class="pm-earned-text padding-0 block cursive">Birth Type</span>
+                        <span class="pm-credits-text block bold sans"><%=user.birth_type%></span>
+
+                      </div>
+                      <div class="col-xs-2"><!-- LEAVE EMPTY --></div>
+                      <div class="col-xs-12"></div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-xs-12">
+                    <div class="row">
+                      <div class="col-xs-2"><!-- LEAVE EMPTY --></div>
+                      <div class="pm-course-title col-xs-8 text-center">
+                        <span class="pm-earned-text block cursive">A patient who gave birth to a child</span>
+                      </div>
+                      <div class="col-xs-2"><!-- LEAVE EMPTY --></div>
+                    </div>
+                  </div>
+      
+                  <div class="col-xs-12">
+                    <div class="row">
+                      <div class="col-xs-2"><!-- LEAVE EMPTY --></div>
+                      <div class="pm-course-title underline col-xs-8 text-center">
+                        <span class="pm-credits-text block bold sans"><%=user.patient_name%></span>
+                      </div>
+                      <div class="col-xs-2"><!-- LEAVE EMPTY --></div>
+                    </div>
+                  </div>
+              </div>       
+              
+              <div class="col-xs-12">
+                <div class="row">
+                  <div class="pm-certificate-footer">
+                      <div class="col-xs-4 pm-certified col-xs-4 text-center">
+                        <span class="pm-credits-text block sans"><b>DOB:</b><%=user.date%></span>
+                        <span class="pm-empty-space block underline"></span>
+                        <span class="bold block">MocDoc Hospital Street 23, gulshan iqbal Lahore</span>
+                      </div>
+                      <div class="col-xs-4">
+                        <!-- LEAVE EMPTY -->
+                      </div>
+                      <div class="col-xs-4 pm-certified col-xs-4 text-center">
+                        <span class="pm-credits-text block sans"><b>Sarjan:</b><%=user.doctor_name%></span>
+                        <span class="pm-empty-space block underline"></span>
+                        <!-- <span class="bold block">DOB: </span> -->
+                        <!-- <span class="bold block">Social Security # (last 4 digits)</span> -->
+                      </div>
+                  </div>
+                </div>
+              </div>
+      
+            </div>
+      
+          </div>
+        </div>
+      </body>
+</body>
+</html>
+
+            </div>
+
+        </div>
+
+
+        <%- include('../partials/receptionsimfooter') -%>

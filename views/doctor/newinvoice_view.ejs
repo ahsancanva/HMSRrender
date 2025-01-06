@@ -1,0 +1,176 @@
+<%- include('../partials/doctorsimheader') -%>
+    <div class="contain">
+        <div class="row">
+
+            <div class="col-3">
+
+                <%- include('../partials/doctorSidebar') -%>
+
+            </div>
+            <div class="col-2 mt-3 profile">
+
+                <!-- <picture> -->
+                <!-- <img src="/image/<%=user.image%>" class="img-fluid img-thumbnail" alt="<%=user.image%>"> -->
+                <!-- </picture> -->
+                <h3 class="">
+                    <%=user.name%>
+                </h3>
+                <p class="">
+                   <b>Total:</b> <%=user.total%>
+                </p>
+
+                <div class="button">
+                    <!-- <a href="/doctor/lab_edit?id=<%=user._id%>" class="sbtn">Edit</a> -->
+                    <a href="/doctor/logout" class="sbtn">Logout</a>
+                    <a onclick="window.print()" class="sbtn mb-5" > Print.</a>
+
+
+                </div>
+                <div class="social">
+                    <box-icon type='logo' name='facebook-square'></box-icon>
+                    <box-icon type='logo' name='instagram'></box-icon>
+                    <box-icon type='logo' name='linkedin-square'></box-icon>
+                    <box-icon type='logo' name='twitter'></box-icon>
+                </div>
+
+            </div>
+
+            <div class="col-7 aboutme  " style="background-color: #fff;">
+
+                <div class="row m-3">
+                    <div class="col-6 p-3" style="border: 1px solid rgba(0,0,0,0.1); background-color: rgb(255, 240, 252);">
+                        <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                            <div class="col-4">
+                                <h1>
+                                    <img class="logo" src="/image/home/logo.svg" style="width: 120px;" alt="">
+                            
+                                  </h1>
+                            </div>
+                            <div class="col-8">
+                                <h3 style="font-size: 18px; text-align: center;"><b>Fee Voucher For MocDoc Hospital</b></h3>
+                                <p style="font-size: 10px; text-align: center;">Please Pay The Challan To Hospital Bank</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6 p-3" style="border: 1px solid rgba(0,0,0,0.1);">
+                                <h3 style="font-size: 14px;">MocDoc Hospital Bank</h3>
+                                <p style="font-size: 10px;">Deposit the fee challan only Hospital Bank</p>
+                            </div>
+                            <div class="col-6 p-3" style="border: 1px solid rgba(0,0,0,0.1);">
+                                <h3 style="font-size: 14px;">MocDoc Hospital Bank</h3>
+                                <p style="font-size: 10px;">Deposit the fee challan only Hospital Bank</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p style="font-size: 10px; text-align: left;"><b>Voucher No:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Name:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Father Name:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>CNIC:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Product Name:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Unit:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Price:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Amount:</b></p>
+                                <p style="font-size: 13px; text-align: left;"><b>Net Amount:</b></p>
+                                <br>
+                                <p style="font-size: 10px; text-align: left;"><b>Due Date:</b></p>
+                            </div>
+                            <div class="col-4">
+                                <p style="font-size: 10px; text-align: left; "><%=user.id%></p>
+                                <p style="font-size: 9px; text-align: left; "><%=user.name%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.fathername%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.id_card%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.product_name%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.unit%></p>
+                                <p style="font-size: 10px; text-align: left; ">Rs.<%=user.price%></p>
+                                <p style="font-size: 10px; text-align: left; ">Rs.<%=user.price%></p>
+                                <p style="font-size: 10px; text-align: left; ">Rs.<%=user.price%></p>
+                                <br>
+                                <p style="font-size: 10px; text-align: left; "><%=user.date%></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 style="font-size: 16px; text-align: center;">PAYMENT TERMS:</h3>
+                                <p style="font-size: 9px; text-align: left;">Fee must be deposited within due date.</p>
+                                <p style="font-size: 10px; text-align: left;">This voucher will be cancelled automatically after due date.</p>
+                                <p style="font-size: 10px; text-align: left;">Any kind of editing in the voucher is strictly prohibited.</p>
+                                <p style="font-size: 12px; text-align: center;"><b>Bank Copy</b></p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 p-3" style="border: 1px solid rgba(0,0,0,0.1); background-color: rgb(255, 240, 252);">
+                        <div class="row" style="display: flex; justify-content: center; align-items: center;">
+                            <div class="col-4">
+                                <h1>
+                                    <img class="logo" src="/image/home/logo.svg" style="width: 120px;" alt="">
+                            
+                                  </h1>
+                            </div>
+                            <div class="col-8">
+                                <h3 style="font-size: 18px; text-align: center;"><b>Fee Voucher For MocDoc Hospital</b></h3>
+                                <p style="font-size: 10px; text-align: center;">Please Pay The Challan To Hospital Bank</p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-6 p-3" style="border: 1px solid rgba(0,0,0,0.1);">
+                                <h3 style="font-size: 14px;">MocDoc Hospital Bank</h3>
+                                <p style="font-size: 10px;">Deposit the fee challan only Hospital Bank</p>
+                            </div>
+                            <div class="col-6 p-3" style="border: 1px solid rgba(0,0,0,0.1);">
+                                <h3 style="font-size: 14px;">MocDoc Hospital Bank</h3>
+                                <p style="font-size: 10px;">Deposit the fee challan only Hospital Bank</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <p style="font-size: 10px; text-align: left;"><b>Voucher No:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Name:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Father Name:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>CNIC:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Product Name:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Unit:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Price:</b></p>
+                                <p style="font-size: 10px; text-align: left;"><b>Amount:</b></p>
+                                <p style="font-size: 13px; text-align: left;"><b>Net Amount:</b></p>
+                                <br>
+                                <p style="font-size: 10px; text-align: left;"><b>Due Date:</b></p>
+                            </div>
+                            <div class="col-4">
+                                <p style="font-size: 10px; text-align: left; "><%=user.id%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.name%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.fathername%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.id_card%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.product_name%></p>
+                                <p style="font-size: 10px; text-align: left; "><%=user.unit%></p>
+                                <p style="font-size: 10px; text-align: left; ">Rs.<%=user.price%></p>
+                                <p style="font-size: 10px; text-align: left; ">Rs.<%=user.price%></p>
+                                <p style="font-size: 10px; text-align: left; ">Rs.<%=user.price%></p>
+                                <br>
+                                <p style="font-size: 9px; text-align: left; "><%=user.date%></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 style="font-size: 16px; text-align: center;">PAYMENT TERMS:</h3>
+                                <p style="font-size: 9px; text-align: left;">Fee must be deposited within due date.</p>
+                                <p style="font-size: 10px; text-align: left;">This voucher will be cancelled automatically after due date.</p>
+                                <p style="font-size: 10px; text-align: left;">Any kind of editing in the voucher is strictly prohibited.</p>
+                                <p style="font-size: 12px; text-align: center;"><b>Patient Copy</b></p>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <%- include('../partials/doctorsimfooter') -%>

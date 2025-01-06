@@ -1,0 +1,48 @@
+<%- include('../partials/receptionsimheader') -%>
+
+    <div class="contain">
+        <div class="row">
+            <div class="col-3">
+                <%- include('../partials/receptionSidebar') -%>
+            </div>
+            <div class="col-6">
+                <form action="" method="post" style="border:1px solid #ccc">
+                    <div class="container" style="border: none;">
+                        <h1>Edit an Blood Bank</h1>
+                        <p>Please fill in this form to create an Blood Bank.</p>
+                        <hr>
+                        <label for="blood_group"><b>Blood_group</b></label>
+                        <input type="text" value="<%=user.blood_group%>" placeholder="Enter blood_group" name="blood_group" required>
+
+                        <label for="no_bag"><b>No_bag</b></label>
+                        <input type="text" value="<%=user.no_bag%>" placeholder="Enter no_bag" name="no_bag" required>
+
+                        <label for="entry_date"><b>Entry Date</b></label>
+                        <input type="date" value="<%=user.entry_date%>" placeholder="Enter entry_date" name="entry_date" required
+                            style="background-color: #F5F5F5; width: 100%;">
+
+                        <br>
+                        <div class="col-md-12">
+                            <input type="hidden" name="user_id" value="<%=user._id%>">
+                        </div>
+                        <div class="clearfix">
+                            <button type="submit" class="signupbtn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <% if(typeof message !=='undefined' ){ %>
+        <div class="container">
+            <div class="col-8 w-50" style="margin: 10px auto;">
+                <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+                    <%= message %>
+                </p>
+            </div>
+        </div>
+        <% } %>
+
+            <%- include('../partials/receptionsimfooter') -%>

@@ -1,0 +1,177 @@
+<%- include('../partials/labsimheader') -%>
+
+  <div class="sidebar close">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus'></i> -->
+      <i class="fa fa-hospital" aria-hidden="true"></i>
+      <!-- <i class="fa fa-h-square" aria-hidden="true"></i> -->
+      <span class="logo_name">.Hospital</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="/lab/lab_dashboard">
+          <i class='bx bx-grid-alt'></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="/" href="/lab/lab_dashboard">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i class='bx bx-user-circle'></i>
+            <span class="link_name">Profile</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Profile</a></li>
+          <li><a href="/lab/profile">Profile</a></li>
+          <li><a href="/lab/edit?id=<%=user._id%>">Edit</a></li>
+          <li><a href="/lab/logout">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/lab/user_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span class="link_name">User</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">User</a></li>
+          <li><a href="/lab/user_list">User List</a></li>
+          <li><a href="/lab/user_add">Add_new</a></li>
+          <li><a href="/lab/user_export">Export User</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/lab/blood_donor_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <!-- <i class="fa fa-black-tie" aria-hidden="true"></i> -->
+            <i class="fa fa-bullseye" aria-hidden="true"></i>
+            <span class="link_name">Blood Donor</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Blood Donor</a></li>
+          <li><a href="/lab/blood_donor">Add_new</a></li>
+          <li><a href="/lab/blood_donor_list">Blood Donor List</a></li>
+          <li><a href="/lab/blood_donor_export">Export Blood Donor</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/lab/blood_bank_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <!-- <i class="fa fa-black-tie" aria-hidden="true"></i> -->
+            <i class="fa fa-bullseye" aria-hidden="true"></i>
+            <span class="link_name">Blood Bank</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Blood Bank</a></li>
+          <li><a href="/lab/blood_bank">Add_new</a></li>
+          <li><a href="/lab/blood_bank_list">Blood Bank List</a></li>
+          <li><a href="/lab/blood_bank_export">Export Blood Bank</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a href="/lab/lab_list">
+            <i class="fa fa-flask" aria-hidden="true"></i>
+            <span class="link_name">Labaouratories</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">lab</a></li>
+          <li><a href="/lab/department">Add_new</a></li>
+          <li><a href="/lab/lab_list">labaouratories List</a></li>
+          <li><a href="/lab/lab_export">Export lab</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="/lab/logout">
+          <!-- <i class='bx bx-mail-send' ></i> -->
+          <i class="fa fa-sign-out" aria-hidden="true"></i>
+          <span class="link_name">LogOut</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="/lab/logout">LogOut</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#">
+          <i class='bx bx-lock-alt'></i>
+          <span class="link_name">Terms & Conditions </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Terms & Conditions </a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">History</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/lab/logout">
+          <i class='bx bx-log-out'></i>
+          <span class="link_name">LogOut</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="/lab/logout">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="/image/<%=user.image%>" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">
+              <%=user.name%>
+            </div>
+            <div class="job">.Hospital</div>
+          </div>
+          <a href="/lab/logout">
+            <i class='bx bx-log-out'></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu'></i>
+      <!-- <span class="text">Drop Down Sidebar</span> -->
+    </div>
+  </section>
+
+
+
+
+  <%- include('../partials/labsimfooter') -%>

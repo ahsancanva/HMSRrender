@@ -1,0 +1,94 @@
+<%- include('../partials/pharmasimheader') -%>
+    <div class="contain">
+        <div class="row">
+
+            <div class="col-3">
+
+                <%- include('../partials/pharmaSidebar') -%>
+
+            </div>
+
+            <div class="col-2 mt-3 profile">
+
+                <!-- <picture> -->
+                <img src="/image/<%=user.image%>" class="img-fluid img-thumbnail" alt="<%=user.image%>">
+                <!-- </picture> -->
+                <h3 class="">
+                    <%=user.name%>
+                </h3>
+                <p class="">
+                    <%=user.email%>
+                </p>
+                <p class="">
+                    <% if(user.is_verified==1){ %>
+                        <p>Verified : true</p>
+                        <% } %>
+                </p>
+                <div class="button">
+                    <!-- <a href="/pharma/pharma_edit?id=<%=user._id%>" class="sbtn">Edit</a> -->
+                    <a href="/pharma/logout" class="sbtn">Logout</a>
+
+                </div>
+                <div class="social">
+                    <box-icon type='logo' name='facebook-square'></box-icon>
+                    <box-icon type='logo' name='instagram'></box-icon>
+                    <box-icon type='logo' name='linkedin-square'></box-icon>
+                    <box-icon type='logo' name='twitter'></box-icon>
+                </div>
+
+            </div>
+
+            <div class="col-7 aboutme">
+                <h1>About Me</h1>
+                <div class="box">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="image">
+                                    <img src="/image/<%=user.image%>" alt="" style="width: 200px; height: 250px;">
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="content">
+                                    <h3>
+                                        <%=user.name%>
+                                    </h3>
+                                    <p>
+                                       <b>Email: </b><%=user.email%>
+                                    </p>
+                                    <p>
+                                        <b>Mobile: </b><%=user.mobile%>
+                                    </p>
+                                    <p class="">
+                                        <% if(user.is_verified==1){ %>
+                                            <p><b>Verified</b> : true</p>
+                                            <% } %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat minima ad inventore
+                            necessitatibus nobis porro eius alias dolorum. Laborum iure veritatis itaque laboriosam
+                            impedit!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officiis repudiandae
+                            explicabo repellat quibusdam obcaecati. Enim eaque molestiae, repellendus, officia in
+                            porro necessitatibus iste sequi debitis beatae laudantium fuga cupiditate laboriosam
+                            aliquam temporibus nisi incidunt? Suscipit facilis laboriosam nulla alias velit,
+                            exercitationem qui mollitia perspiciatis.</p>
+                        <br>
+                        <a href="/pharma/delete" class="sbtn">Delete Account</a>
+
+                    </div>
+                </div>
+
+
+                <!-- ------- -->
+
+            </div>
+
+        </div>
+
+
+        <%- include('../partials/pharmasimfooter') -%>

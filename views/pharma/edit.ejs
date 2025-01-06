@@ -1,0 +1,63 @@
+
+<%- include('../partials/pharmasimheader') -%>
+
+<div class="contain">
+
+    <div class="row">
+       
+
+        <div class="col-3">
+            
+            <%- include('../partials/pharmaSidebar') -%>
+
+        </div>
+
+
+        <div class="col-7 mt-5" id="form"  >
+
+    
+            <form action="" method="post" enctype="multipart/form-data" id="search" class="row g-3 w-80">
+                <div class="col-md-12">
+                    <label for="Name" class="form-label">Name</label>
+                    <input type="text" name="name" value="<%=user.name%>" required class="form-control" id="Name">
+                </div>
+                <div class="col-md-12">
+                    <input type="hidden" name="user_id" value="<%=user._id%>">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputPassword4" class="form-label">Mobile</label>
+                    <input type="text" name="mobile"value="<%=user.mobile%>" class="form-control" id="inputPassword4">
+                </div>
+                <div class="col-12">
+                    <label for="inputAddress" class="form-label">Image</label>
+                    <input type="file" name="image" value="<%=user.image%>" class="form-control" required id="inputAddress">
+                </div>
+                <div class="col-md-12">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" name="email" value="<%=user.email%>" required class="form-control" id="inputEmail4">
+                </div>
+                <div class="col-12">
+                    <button type="submit" value="register" class="btn btn-primary w-100">submit</button>
+                </div>
+        
+            </form>
+        </div>
+        
+        <%
+        if(typeof message !== 'undefined'){
+            %>
+            <div class="container">
+                <div class="col-8 w-50" style="margin: 10px auto;">
+                    <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;"><%= message %></p>
+                </div>
+            </div>
+            <%
+        }
+        %>
+        
+
+        </div>
+    </div>
+
+  
+<%- include('../partials/pharmasimfooter') -%>

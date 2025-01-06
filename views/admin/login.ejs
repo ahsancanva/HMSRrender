@@ -1,0 +1,57 @@
+<%- include('../partials/adminheader') -%>
+<!-- ------------------------------------------------------------------------- -->
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6 m-auto" >
+            <form action="/admin/login" method="post">
+                <div class="imgcontainer">
+                  <img src="/image/login/login_avatar.png" alt="Avatar" class="avatar">
+                </div>
+              
+                <div class="container">
+                  <label for="email"><b>Email</b></label>
+                  <input type="email" placeholder="Enter Email" name="email" required>
+              
+                  <label for="password"><b>Password</b></label>
+                  <input type="password" placeholder="Enter Password" name="password" required>
+              
+                  <button type="submit">Login</button>
+                  <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                  </label>
+                </div>
+              
+                <div class="container" style="background-color:#f1f1f1; display: flex; justify-content: space-around; align-items: center; ">
+                  <span class="psw">Forgot <a href="/admin/forget">password?</a></span>
+                  <span class="psw">Mail <a href="/admin/verification">verification?</a></span>
+                  <!-- <span class="psw">Create an <a href="/register">Account?</a></span> -->
+                </div>
+              </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <% if(typeof message !=='undefined' ){ %>
+        <div class="container">
+            <div class="col-6 w-50" style="margin: 10px auto;">
+                <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+                    <%= message %>
+                </p>
+            </div>
+        </div>
+        <% } %>
+
+            <%- include('../partials/adminfooter') -%>

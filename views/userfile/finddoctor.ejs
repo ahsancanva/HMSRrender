@@ -1,0 +1,123 @@
+<%- include('../partials/header') -%>
+<div class="alert alert-danger" role="alert">
+    LogOut Here <a href="/logout" class="alert-link">Are You Sure </a>. Give it a click if you like.
+  </div>
+    <section class="appointment">
+        
+        <div class="container">
+
+            </tr>
+            <!-- <tr> -->
+            <% if(user.length> 0){ %>
+
+                <% for (var i=0; i < user.length ; i++) { %>
+                    <div class="box">
+                        <div class="image">
+                            <img src="/image/<%= user[i].image %>" alt="">
+                        </div>
+                        <div class="content">
+                            <h3>
+                                <%=user[i].name%>
+                            </h3>
+                            <div class="resg">
+                                <p>
+                                <%=user[i].department%>
+
+                                </p>
+                                <div><i class="fa fa-star" aria-hidden="true"  style="color: gold;"></i> 4.5 (2)</div>
+                            </div>
+                            <div class="check">
+                                <p>At Amount Adora Hospital, LAHORE</p>
+                            </div>
+                            <a class="sbtn" href="/bookAppointment?id=<%= user[i]._id %>">Book a
+                                Appointment</a>
+                            <!-- <a onclick="document.getElementById('id01').style.display='block'" class="sbtn">Book a
+                                Appointment</a> -->
+                        </div>
+                    </div>
+
+                    <% } %>
+                        <% } else{ %>
+                            <tr>
+                                <td colspan="5">
+                                    <h1 class="p-5">UserNotFound</h1>
+                                </td>
+                            </tr>
+                            <% } %>
+                                </tr>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- 
+<section class="appointment">
+    <div class="container">
+        
+        <div class="box">
+            <div class="image">
+                <img src="/image/appoint/app1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Dr. Altaf Ahmad</h3>
+                <div class="resg">
+                    <p>Surgan</p>
+                    <div><i class="fa fa-star" aria-hidden="true"></i> 4.5 (2)</div>
+                </div>
+                <div class="check">
+                    <p>At Amount Adora Hospital, LAHORE</p>
+                </div>
+                <a onclick="document.getElementById('id01').style.display='block'" class="sbtn" >Book a Appointment</a>
+            </div>
+        </div>
+
+
+    <div class="box">
+        <div class="image">
+            <img src="/image/appoint/1.png" alt="">
+        </div>
+        <div class="content">
+            <h3>Dr. Altaf Ahmad</h3>
+            <div class="resg">
+                <p>Surgan</p>
+                <div><i class="fa fa-star" aria-hidden="true"></i> 4.5 (2)</div>
+            </div>
+            <div class="check">
+                <p>At Amount Adora Hospital, LAHORE</p>
+            </div>
+            <a  onclick="document.getElementById('id01').style.display='block'" class="sbtn">Book a Appointment</a>
+
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="image">
+            <img src="/image/appoint/2.png" alt="">
+        </div>
+        <div class="content">
+            <h3>Dr. Altaf Ahmad</h3>
+            <div class="resg">
+                <p>Surgan</p>
+                <div><i class="fa fa-star" aria-hidden="true"></i> 4.5 (2)</div>
+            </div>
+            <div class="check">
+                <p>At Amount Adora Hospital, LAHORE</p>
+            </div>
+            <a onclick="document.getElementById('id01').style.display='block'" class="sbtn">Book a Appointment</a>
+
+        </div>
+    </div>
+    
+</div>
+</section> -->
+
+
+    <%- include('../partials/footer') -%>

@@ -1,0 +1,54 @@
+<%- include('../partials/adminsimheader') -%>
+
+  <div class="contain">
+    <div class="row">
+      <div class="col-3">
+        <%- include('../partials/adminSidebar') -%>
+      </div>
+      <div class="col-8">
+        <form action="" method="post" enctype="multipart/form-data" style="border:1px solid #ccc">
+          <div class="container" style="border: none;">
+            <h1>Edit a Blog Post</h1>
+            <p>Please fill in this form to create Blog Post.</p>
+            <hr>
+            <label for="title"><b>Title</b></label>
+            <input type="text" value="<%=user.title%>" placeholder="Enter Name" name="title" required>
+            <br>
+
+            <label for="image"><b>Image</b></label>
+            <input type="file"value="<%=user.image%>" name="image" required>
+            <br>
+
+            <label for="date"><b>Date</b></label>
+            <input type="date"value="<%=user.date%>" name="date" style="background-color: #F5F5F5; width: 100%;" required>
+            <br>
+            <br>
+
+            <label for="image"><b>Description</b></label>
+            <textarea id="w3review"value="<%=user.description%>" name="description" class="w-100" rows="8" cols="10"></textarea>
+            <br>
+            <div class="col-md-12">
+                <input type="hidden" name="user_id" value="<%=user._id%>">
+            </div>
+
+            <div class="clearfix">
+              <button type="submit" class="signupbtn w-100">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <% if(typeof message !=='undefined' ){ %>
+    <div class="container">
+      <div class="col-8 w-50" style="margin: 10px auto;">
+        <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+          <%= message %>
+        </p>
+      </div>
+    </div>
+    <% } %>
+
+      <%- include('../partials/adminsimfooter') -%>

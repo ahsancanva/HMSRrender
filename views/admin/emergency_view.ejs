@@ -1,0 +1,186 @@
+<%- include('../partials/adminsimheader') -%>
+    <div class="contain">
+        <div class="row">
+
+            <div class="col-3">
+
+                <%- include('../partials/adminSidebar') -%>
+
+            </div>
+
+         <div class="col-2 mt-3 profile">
+
+                <!-- <img src="/image/<%=user.image%>" class="img-fluid img-thumbnail" alt="<%=user.image%>"> -->
+                <h3 class="">
+                    <%=user.name%>
+                </h3>
+                <p class="">
+                    <%=user.email%>
+                </p>
+                <p class="">
+                    <% if(user.is_verified==1){ %>
+                        <p>Verified : true</p>
+                        <% } %>
+                </p>
+                <div class="button">
+                    <a href="/admin/emergency_edit?id=<%=user._id%>" class="sbtn">Edit</a>
+                    <a href="/admin/logout" class="sbtn">Logout</a>
+                    <a onclick="window.print()" class="sbtn mb-5" > Print.</a>
+
+
+                </div>
+                <div class="social">
+                    <box-icon type='logo' name='facebook-square'></box-icon>
+                    <box-icon type='logo' name='instagram'></box-icon>
+                    <box-icon type='logo' name='linkedin-square'></box-icon>
+                    <box-icon type='logo' name='twitter'></box-icon>
+                </div>
+
+            </div>
+
+            <div class="col-6 aboutme " style="background-color: #fff;">
+
+                <div class="row">
+                    <div class="col-2">
+                        <h1>
+                            <img class="logo" src="/image/home/logo.svg" style="width: 120px;" alt="">
+                    
+                          </h1>
+                    </div>
+                    <div class="col-8 mt-5">
+                        <p style="font-size: 9px; text-align: center; line-height: 6px;"><b>MocDoc Hospital</b></p>
+                        <p style="font-size: 9px; text-align: center; line-height: 6px;"><b>Street 23, gulshan iqbal Lahore</b></p>
+                        <p style="font-size: 9px; text-align: center; line-height: 6px;">visitDate: <%=user.date%></p>
+                    </div>
+                    <div class="col-2">
+                        <h1>
+                            <img src="/image/<%=user.image%>" class="img-fluid img-thumbnail" alt="<%=user.image%>">
+                    
+                          </h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p style="border-top: 1px solid rgba(0,0,0,0.5);"></p>
+                    </div>
+                </div>
+
+                <div class="row pb-5">
+                    <div class="col-3">
+                        <img src="/image/barcode/barcode.png" style="height: 60px; width: 160px;" alt="">
+                    </div>
+                    <div class="col-4">
+                        <p style="text-align: center; font-size: 9px; line-height: 3px;" ><b><%=user.id%></b></p>
+                        <p style="text-align: center; font-size: 9px; line-height: 3px;" ><%=user.id_card%></p>
+                        <p style="text-align: center; font-size: 9px; line-height: 3px;" ><%=user.address%></p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-3">
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;" ><b>Name:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;" ><b>LastName:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>CNIC:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Gender:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>DOB:</b></p>
+                            </div>
+                            <div class="col-7">
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.name%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.lastname%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.id_card%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.gender%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 14px;" ><%=user.dob%></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-3">
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;" ><b>Email:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Mobile:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Relation:</b></p>
+                            </div>
+                            <div class="col-7">
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.email%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.mobile%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.relation%></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-3">
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;" ><b>HeartRate</b>:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;" ><b>BloodPressure:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Respiratory:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Temperature:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Oxigen:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Height:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Weight:</b></p>
+                            </div>
+                            <div class="col-7">
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.heart_rate%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.blood_pressure%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.respiratory%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.temperature%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.oxigen%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.height%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.weight%></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="row">
+                            <div class="col-3">
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;" ><b>Death:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Bed_no:</b></p>
+                                <p style="text-align: left; font-size: 10px; line-height: 4px;"><b>Alergies:</b></p>
+                            </div>
+                            <div class="col-7">
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.death%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.bed_no%></p>
+                                <p style="text-align: left; font-size: 9px; line-height: 4px;" ><%=user.alergies%></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6" style="height: 150px; border-right: 1px solid rgba(0,0,0,0.5);border-bottom: 1px solid rgba(0,0,0,0.5);">
+                        <p style="text-align: left; font-size: 10px; line-height: 4px;" ><b>Examination:</b></p>
+                                   
+                    </div>
+                    <div class="col-6" style="height: 150px; border-bottom: 1px solid rgba(0,0,0,0.5);">
+                        <p style="text-align: left; font-size: 10px; line-height: 4px;" ><b>Treatment</b>:</b></p>
+                                 
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-6" style="border-right: 1px solid rgba(0,0,0,0.5);border-bottom: 1px solid rgba(0,0,0,0.5);">
+                        <img src="/image/barcode/barcode.png" style="height: 50px; width: 150px; margin-bottom: 10px;" alt="">           
+                        <p style="text-align: left; font-size: 9px; line-height: 3px;" ><b><%=user.name%></b></p>
+                        <p style="font-size: 9px; text-align: left; line-height: 15px;">visitDate: <%=user.date%></p>
+                    </div>
+                    <div class="col-6" style="border-bottom: 1px solid rgba(0,0,0,0.5);">
+                        <img src="/image/barcode/barcode.png" style="height: 50px; width: 150px; margin-bottom: 10px;" alt="">           
+                        <p style="text-align: left; font-size: 9px; line-height: 3px;" ><b><%=user.name%></b></p>
+                        <p style="font-size: 9px; text-align: left; line-height: 15px;">visitDate: <%=user.date%></p>
+                    </div>
+                </div>
+                    
+                </div>
+                
+
+            </div>
+
+        </div>
+
+
+        <%- include('../partials/adminsimfooter') -%>

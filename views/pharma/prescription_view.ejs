@@ -1,0 +1,137 @@
+<%- include('../partials/pharmasimheader') -%>
+    <div class="contain">
+        <div class="row">
+
+            <div class="col-3">
+
+                <%- include('../partials/pharmaSidebar') -%>
+
+            </div>
+
+            <div class="col-2 mt-3 profile">
+
+                <!-- <picture> -->
+                <img src="/image/<%=user.image%>" class="img-fluid img-thumbnail" alt="<%=user.image%>">
+                </picture>
+                <h3 class="pb-3">
+                    <%=user.patient_name%>
+                </h3>
+                <p class="pb-3">
+                    <b>Visit: </b>
+                    <%=user.visit%>
+                </p>
+                <p class="pb-3">
+                    <b>Gender: </b>
+                    <%=user.gender%>
+                </p>
+                <p class="pb-3">
+                    <%=user.email%>
+                </p>
+                <br>
+
+                <div class="button">
+                    <a href="/pharma/prescription_edit?id=<%=user._id%>" class="sbtn">Edit</a>
+                    <a href="/pharma/logout" class="sbtn">Logout</a>
+
+                </div>
+                <div class="social">
+                    <box-icon type='logo' name='facebook-square'></box-icon>
+                    <box-icon type='logo' name='instagram'></box-icon>
+                    <box-icon type='logo' name='linkedin-square'></box-icon>
+                    <box-icon type='logo' name='twitter'></box-icon>
+                </div>
+
+            </div>
+
+            <div class="col-7 aboutme" style="background-color: #fff;">
+                <div class="box">
+
+                    <div class="contain mt-1">
+
+                        <div class="row mb-3">
+                            <div class="col-12">
+                                <img src="/image/prescription/prescription_header.png" class="w-100" alt="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="content">
+                                    <h3>
+                                        <b>
+                                            <%=user.medication%>
+                                        </b>
+
+                                    </h3>
+                                    <p>
+                                        <b>Drug Name :  </b>
+                                        <%=user.drug_name%>
+                                    </p>
+                                    <p>
+                                        <b>Drug Strength :   </b>
+                                        <%=user.drug_strength%>
+                                    </p>
+                                    <p>
+                                        <b>Quantity : </b>
+                                        <%=user.quantity%>
+                                    </p>
+
+                                    <p>
+                                        <b>Charges Amount :  </b>
+                                        <%=user.amount%>
+                                    </p>
+
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="image mb-4">
+                                    <a href="" onclick="window.print()" class="sbtn mb-5" > Print.</a>
+                                    <img src="/image/<%=user.image%>" alt="" style="width: 110px; height: 140px; margin-top: 1rem;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content">
+                        <p>
+                            <%=user.description%>
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officiis repudiandae
+                            explicabo repellat quibusdam obcaecati. Enim eaque molestiae, repellendus, officia in
+                            porro necessitatibus iste sequi debitis beatae laudantium fuga cupiditate laboriosam
+                            aliquam temporibus nisi incidunt? Suscipit facilis laboriosam nulla alias velit,
+                            exercitationem qui mollitia perspiciatis.</p>
+
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p class="">
+                                        <b>Date of issue: <br> </b>
+                                        <%=user.date_of_issue%>
+                                    </p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="">
+                                        <b>Signature: </b>.........................
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+
+                    </div>
+                </div>
+
+
+                <!-- ------- -->
+
+            </div>
+
+        </div>
+
+
+        <%- include('../partials/pharmasimfooter') -%>

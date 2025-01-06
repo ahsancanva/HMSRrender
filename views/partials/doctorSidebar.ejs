@@ -1,0 +1,363 @@
+<%- include('../partials/doctorsimheader') -%>
+
+  <div class="sidebar close">
+    <div class="logo-details">
+      <!-- <i class='bx bxl-c-plus-plus'></i> -->
+      <i class="fa fa-hospital" aria-hidden="true"></i>
+
+      <span class="logo_name">.Hospital</span>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a href="/doctor/doctor_dashboard">
+          <i class='bx bx-grid-alt'></i>
+          <span class="link_name">Dashboard</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="/" href="/doctor/doctor_dashboard">Dashboard</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a>
+            <i class='bx bx-user-circle'></i>
+            <span class="link_name">Profile</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Profile</a></li>
+          <li><a href="/doctor/profile">Profile</a></li>
+          <li><a href="/doctor/edit?id=<%=user._id%>">Edit</a></li>
+          <li><a href="/doctor/logout">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/user_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <span class="link_name">User</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">User</a></li>
+          <li><a href="/doctor/user_list">User List</a></li>
+          <li><a href="/doctor/user_add">Add_new</a></li>
+          <li><a href="/doctor/user_export">Export User</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/prescription_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-universal-access" aria-hidden="true"></i>
+            <span class="link_name">Prescription</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Prescription</a></li>
+          <li><a href="/doctor/prescription">Add_new</a></li>
+          <li><a href="/doctor/prescription_list">Prescription List</a></li>
+          <li><a href="/doctor/prescription_export">Export Prescription</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/newinvoice_list">
+            <i class='bx bx-book-alt' ></i>
+            <!-- <i class="fa fa-money" aria-hidden="true"></i> -->
+
+            <span class="link_name">Newinvoice</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Newinvoice</a></li>
+          <li><a href="/doctor/newinvoice">Add_new</a></li>
+          <li><a href="/doctor/newinvoice_list">Newinvoice List</a></li>
+          <li><a href="/doctor/newinvoice_export">Export Newinvoice</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/appointment_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-address-book" aria-hidden="true"></i>
+            <span class="link_name">Appointment</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Appointment</a></li>
+          <li><a href="/doctor/appointment">Add_new</a></li>
+          <li><a href="/doctor/appointment_list">Appointment List</a></li>
+          <li><a href="/doctor/appointment_export">Export Appointment</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/operation_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-life-ring" aria-hidden="true"></i>
+            <span class="link_name">Operation</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Operation</a></li>
+          <li><a href="/doctor/operation">Add_new</a></li>
+          <li><a href="/doctor/operation_list">Operation List</a></li>
+          <li><a href="/doctor/operation_export">Export Operation</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/birth_report_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-pencil-square" aria-hidden="true"></i>
+            <span class="link_name">Birth Report</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Birth Report</a></li>
+          <li><a href="/doctor/birth_report">Add_new</a></li>
+          <li><a href="/doctor/birth_report_list">Birth Report List</a></li>
+          <li><a href="/doctor/birth_report_export">Export Birth Report</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/death_report_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-print" aria-hidden="true"></i>
+            <span class="link_name">Death Reports</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Death Reports</a></li>
+          <li><a href="/doctor/death_report">Add_new</a></li>
+          <li><a href="/doctor/death_report_list">Death Reports List</a></li>
+          <li><a href="/doctor/death_report_export">Export Death Reports</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/nurse_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-universal-access" aria-hidden="true"></i>
+            <span class="link_name">Nurse</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Nurse</a></li>
+          <li><a href="/doctor/department">Add_new</a></li>
+          <li><a href="/doctor/nurse_list">Nurse List</a></li>
+          <li><a href="/doctor/nurse_export">Export Nurse</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/patient_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-wheelchair-alt" aria-hidden="true"></i>
+            <span class="link_name">Patient</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Patient</a></li>
+          <li><a href="/doctor/department">Add_new</a></li>
+          <li><a href="/doctor/patient_list">Patient List</a></li>
+          <li><a href="/doctor/patient_export">Export Patient</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/bed_allotment_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fas fa-bed" aria-hidden="true"></i>
+            <span class="link_name">Bed Allotment</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Bed Allotment</a></li>
+          <li><a href="/doctor/bed_allotment">Add_new</a></li>
+          <li><a href="/doctor/bed_allotment_list">Bed Allotment List</a></li>
+          <li><a href="/doctor/bed_allotment_export">Export Bed Allotemtn</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/blood_bank_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <!-- <i class="fa fa-black-tie" aria-hidden="true"></i> -->
+            <i class="fa fa-bullseye" aria-hidden="true"></i>
+            <span class="link_name">Blood Bank</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Blood Bank</a></li>
+          <li><a href="/doctor/blood_bank">Add_new</a></li>
+          <li><a href="/doctor/blood_bank_list">Blood Bank List</a></li>
+          <li><a href="/doctor/blood_bank_export">Export Blood Bank</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/reception_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-address-book" aria-hidden="true"></i>
+
+            <span class="link_name">Receptionist</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Receptionist</a></li>
+          <!-- <li><a href="/doctor/department">Add_new</a></li> -->
+          <li><a href="/doctor/reception_list">Receptionist List</a></li>
+          <li><a href="/doctor/reception_export">Export Receptionist</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/doctor_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-user-md" aria-hidden="true"></i>
+            <span class="link_name">Doctor</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Doctor</a></li>
+          <!-- <li><a href="/doctor/department">Add_new</a></li> -->
+          <li><a href="/doctor/doctor_list">Doctor List</a></li>
+          <li><a href="/doctor/doctor_export">Export Doctor</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/accountant_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-university" aria-hidden="true"></i>
+            <span class="link_name">Accountants</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Accountants</a></li>
+          <!-- <li><a href="/doctor/department">Add_new</a></li> -->
+          <li><a href="/doctor/accountant_list">Accountants List</a></li>
+          <li><a href="/doctor/accountant_export">Export Accountants</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/lab_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-flask" aria-hidden="true"></i>
+            <span class="link_name">Labaouratories</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">lab</a></li>
+          <!-- <li><a href="/doctor/department">Add_new</a></li> -->
+          <li><a href="/doctor/lab_list">labaouratories List</a></li>
+          <li><a href="/doctor/lab_export">Export lab</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="/doctor/pharmacist_list">
+            <!-- <i class='bx bx-book-alt' ></i> -->
+            <i class="fa fa-plus-square" aria-hidden="true"></i>
+            <span class="link_name">Pharmacists</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow'></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name">Pharmacist</a></li>
+          <!-- <li><a href="/doctor/department">Add_new</a></li> -->
+          <li><a href="/doctor/pharmacist_list">Pharmacists List</a></li>
+          <li><a href="/doctor/pharmacist_export">Export Pharmacists</a></li>
+        </ul>
+      </li>
+
+
+
+      <li>
+        <a href="#">
+          <i class='bx bx-lock-alt'></i>
+          <span class="link_name">Terms & Conditions </span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Terms & Conditions </a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-history'></i>
+          <span class="link_name">History</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">History</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="link_name">Setting</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="#">Setting</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="/doctor/logout">
+          <i class='bx bx-log-out'></i>
+          <span class="link_name">LogOut</span>
+        </a>
+        <ul class="sub-menu blank">
+          <li><a class="link_name" href="/doctor/logout">LogOut</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="/image/<%=user.image%>" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">
+              <%=user.name%>
+            </div>
+            <div class="job">.Hospital</div>
+          </div>
+          <a href="/doctor/logout">
+            <i class='bx bx-log-out'></i>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="home-content">
+      <i class='bx bx-menu'></i>
+      <!-- <span class="text">Drop Down Sidebar</span> -->
+    </div>
+  </section>
+
+
+
+
+  <%- include('../partials/doctorsimfooter') -%>

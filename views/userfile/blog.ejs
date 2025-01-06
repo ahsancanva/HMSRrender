@@ -1,0 +1,199 @@
+<%- include('../partials/header') -%>
+
+    <!-- =========================================================================================== -->
+    <!-- =========================================================================================== -->
+    <!-- =========================================================================================== -->
+    <!-- =========================================================================================== -->
+    <!-- =========================================================================================== -->
+    <!-- Blog section start  -->
+
+    <!-- Blog paget top banner -->
+    <section class="blog-banner">
+        <div class="content">
+            <h1>#READMORE</h1>
+            <p>read the sucessfull stories  and product information.</p>
+        </div>
+    </section>
+
+
+
+    <!-- Blog section start  -->
+
+    <section class="blog">
+        <div class="heading">
+            <h1><span></span> Read Ours Blogs</h1>
+        </div>
+
+        <div class="blog-container">
+
+            <div class="container-1">
+
+                <% if(user.length> 0){ %>
+
+                    <% for (var i=0; i < user.length; i++) { %>
+
+                <div class="box" onclick="window.location.href='/detail_post?id=<%= user[i]._id %>'">
+                    <div class="image" style="text-align: left;">
+                        <td>
+                            <img src="/image/<%= user[i].image %>" class="img-fluid "
+                                alt="<%= user.image %>">
+                        </td>
+                    </div>
+                    <div class="content" style="overflow-wrap: break-word;">
+                        <h1 style="text-align: left;">
+                            <%=user[i].title.substring(0, 45)%>
+                        </h1>
+                        <p style="width: 100%; overflow-wrap: break-word; text-align: left;">
+                            <%=user[i].description.substring(0, 45) %>
+                        </p>
+                        <a href="/detail_post?id=<%= user[i]._id %>" class="xlbtn">Read More</a>
+                        <div class="icons">
+                            <i class="fa fa-calendar" aria-hidden="true"> <span>23/02/2023</span></i>
+                            <i class="fa fa-user" aria-hidden="true"> <span>admin</span></i>
+                            <i class="fa fa-comments" aria-hidden="true"> <span>21k</span></i>
+                            <i class="fa fa-thumbs-up" aria-hidden="true"> <span>2M</span></i>
+                        </div>
+                    </div>
+                </div>
+
+                <% } %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="5">
+                            <h1 class="p-5">DataNotFound</h1>
+                        </td>
+                    </tr>
+                    <% } %>
+                        </tr>
+
+
+            </div>
+            <!-- -------------------------------------------------------- -->
+            <div class="container-2">
+
+                <div class="search">
+                    <h1>Search Web</h1>
+                    <form action="" class="searchForm">
+                        <input type="search" name="search" value="search here....">
+                        <a href="" class="btn">Search</a>
+                    </form>
+                </div>
+
+                <div class="newsletterMin">
+                    <h1>Newsletters SignUp</h1>
+                    <form action="/home" class="newsletterForm">
+                        <input type="email" name="email" placeholder="Newsletters SignUp">
+                        <a href="" class="btn">SignUp</a>
+                    </form>
+                </div>
+
+                <% if(user.length> 0){ %>
+
+                    <% for (var i=0; i < 4; i++) { %>
+                <div class="box"  onclick="window.location.href='/detail_post?id=<%= user[i]._id %>'">
+                    <div class="image" style="text-align: left;">
+                        <td>
+                            <img src="/image/<%= user[i].image %>" class="img-fluid "
+                                alt="<%= user.image %>">
+                        </td>
+                    </div>
+                    <div class="content">
+                        <h1 style="text-align: left;">
+                            <%=user[i].title.substring(0, 15)%>
+                        </h1>
+                        <a href="/detail_post?id=<%= user[i]._id %>" class="sbtn">Read More</a>
+                        <div class="icons">
+                            <i class="fa fa-user" aria-hidden="true"> <span>admin</span></i>
+                            <i class="fa fa-comments" aria-hidden="true"> <span>21k</span></i>
+                            <i class="fa fa-thumbs-up" aria-hidden="true"> <span>2M</span></i>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="5">
+                            <h1 class="p-5">DataNotFound</h1>
+                        </td>
+                    </tr>
+                    <% } %>
+                        </tr>
+                <!-- <div class="box"  onclick="window.location.href='singlepost.html'">
+                    <div class="image">
+                        <img src="/image/blog/2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h1>Taiba K Jaane Wale - Owais Raza Qadri - 2022</h1>
+                        <a href="" class="sbtn">Read More</a>
+                        <div class="icons">
+                            <i class="fa fa-user" aria-hidden="true"> <span>admin</span></i>
+                            <i class="fa fa-comments" aria-hidden="true"> <span>21k</span></i>
+                            <i class="fa fa-thumbs-up" aria-hidden="true"> <span>2M</span></i>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="box"  onclick="window.location.href='singlepost.html'">
+                    <div class="image">
+                        <img src="/image/blog/3.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h1>Taiba K Jaane Wale - Owais Raza Qadri - 2022</h1>
+                        <a href="" class="sbtn">Read More</a>
+                        <div class="icons">
+                            <i class="fa fa-user" aria-hidden="true"> <span>admin</span></i>
+                            <i class="fa fa-comments" aria-hidden="true"> <span>21k</span></i>
+                            <i class="fa fa-thumbs-up" aria-hidden="true"> <span>2M</span></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box"  onclick="window.location.href='singlepost.html'">
+                    <div class="image">
+                        <img src="/image/blog/4.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h1>Taiba K Jaane Wale - Owais Raza Qadri - 2022</h1>
+                        <a href="" class="sbtn">Read More</a>
+                        <div class="icons">
+                            <i class="fa fa-user" aria-hidden="true"> <span>admin</span></i>
+                            <i class="fa fa-comments" aria-hidden="true"> <span>21k</span></i>
+                            <i class="fa fa-thumbs-up" aria-hidden="true"> <span>2M</span></i>
+                        </div>
+                    </div>
+                </div> -->
+
+
+
+                <div class="social">
+                    <div class="icons">
+                        <a href="" class="fab fa-facebook-f"></a>
+                        <a href="" class="fab fa-twitter"></a>
+                        <a href="" class="fab fa-instagram"></a>
+                        <a href="" class="fab fa-linkedin"></a>
+                        <a href="" class="fab fa-pinterest"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+        <!-- pagination section start  -->
+        <section class="pagination">
+            <div class="pagi">
+                <a href="">Prev</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">Next</a>
+            </div>
+        </section>
+
+
+
+
+<%- include('../partials/footer') -%>

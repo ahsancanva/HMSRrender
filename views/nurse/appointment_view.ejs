@@ -1,0 +1,120 @@
+<%- include('../partials/nursesimheader') -%>
+    <div class="contain">
+        <div class="row">
+
+            <div class="col-3">
+
+                <%- include('../partials/nurseSidebar') -%>
+
+            </div>
+
+            <div class="col-2 mt-3 profile">
+
+                <!-- <picture> -->
+                <!-- <img src="/image/<%=user.image%>" class="img-fluid img-thumbnail" alt="<%=user.image%>"> -->
+                <!-- </picture> -->
+                <h3 class="">
+                    <%=user.patient_name%>
+                </h3>
+                <p class="">
+                    <%=user.email%>
+                </p>
+                <p class="">
+                    <% if(user.is_verified==1){ %>
+                        <p>Verified : true</p>
+                        <% } %>
+                </p>
+                <div class="button">
+                    <!-- <a href="/nurse/appointment_edit?id=<%=user._id%>" class="sbtn">Edit</a> -->
+                    <a href="/nurse/logout" class="sbtn">Logout</a>
+
+                </div>
+                <div class="social">
+                    <box-icon type='logo' name='facebook-square'></box-icon>
+                    <box-icon type='logo' name='instagram'></box-icon>
+                    <box-icon type='logo' name='linkedin-square'></box-icon>
+                    <box-icon type='logo' name='twitter'></box-icon>
+                </div>
+
+            </div>
+
+            <div class="col-7 mt-1 aboutme" style="background-color: #fff;">
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <img src="/image/appointment_certificate/appointment_certificate.png" class="w-100" alt="">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="contain">
+
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="content">
+                                    <!-- <h3 class=""> -->
+                                        <p style="font-size: 25px;"><b>Doctor : </b>Dr. <%=user.doctor_name%></p>
+                                    <!-- </h3> -->
+                                    <p>
+                                        <b>Appointment Date: </b>
+                                        <%=user.appointment_date%>
+                                    </p>
+                                    <p class="">
+                                        <% if(user.is_verified==1){ %>
+                                            <p><b>Verified</b> : true</p>
+                                            <% } %>
+                                    </p>
+                                    <p>
+                                        <b>Email: </b>
+                                        <%=user.email%>
+                                    </p>
+                                    <p>
+                                        <b>Mobile: </b>
+                                        <%=user.mobile%>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="image">
+                                    <a href=""  onclick="window.print()" class="sbtn mb-5">Print.</a>
+                                    <img src="/image/<%=user.image%>" alt="" style="width: 110px; height: 150px; margin-top: 1rem;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quaerat minima ad inventore
+                            necessitatibus nobis porro eius alias dolorum. Laborum iure veritatis itaque laboriosam
+                            impedit!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum officiis repudiandae
+                            explicabo repellat quibusdam obcaecati. Enim eaque molestiae, repellendus, officia in
+                            porro necessitatibus iste sequi debitis beatae laudantium fuga cupiditate laboriosam
+                            aliquam temporibus nisi incidunt? Suscipit facilis laboriosam nulla alias velit,
+                            exercitationem qui mollitia perspiciatis.</p>
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-8">
+                                    <p class="">
+                                        <b>Date of issue: <br> </b>
+                                        <%=user.appointment_date%>
+                                    </p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="">
+                                        <b>Signature: </b>.........................
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- ------- -->
+
+            </div>
+
+        </div>
+
+
+        <%- include('../partials/nursesimfooter') -%>

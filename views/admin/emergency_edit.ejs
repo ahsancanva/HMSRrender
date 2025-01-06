@@ -1,0 +1,155 @@
+<%- include('../partials/adminsimheader') -%>
+
+  <div class="contain">
+    <div class="row">
+      <div class="col-3">
+        <%- include('../partials/adminSidebar') -%>
+      </div>
+      <div class="col-8">
+        <form action="" method="post" enctype="multipart/form-data" style="border:1px solid #ccc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                <h1 style="color: rgb(6, 6, 65); font-size: 30px; font-weight: 600; margin-bottom:15px; text-align:center;">Edit Emergency Admission Form</h1>
+                <p style="text-align: center;" >Please Fill Up The Form</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <label for="date"><b>Date</b></label>
+                        <input type="date" placeholder="Enter Date" value="<%=user.date%>" name="date"style=" margin-bottom:10px; background-color: #F5F5F5; width: 100%;" required>  
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" placeholder="Enter Name "value="<%=user.name%>" name="name" required>            
+                    </div>
+                    <div class="col-4">
+                        <label for="lastname"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name "value="<%=user.lastname%>" name="lastname" required>   
+                    </div>
+                    <div class="col-4">
+                        <label for="id_card"><b>ID_Card</b></label>
+                        <input type="text" placeholder="Enter ID_Card "value="<%=user.id_card%>" name="id_card" required>   
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <label for="image"><b>Image</b></label>
+                        <input type="file" name="image"value="<%=user.image%>" required>
+                    </div>
+                    <div class="offset-1 col-5">
+                        <br>
+                        <label for="image"><b>Gender:</b></label>
+                        <br>
+                        <label for="">male</label>
+                        <input type="radio" name="gender" value="1">
+                        <label for="">female</label>
+                        <input type="radio" name="gender" value="0">
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                <h1 style="font-size: 25px; font-weight: 600; margin-bottom:15px; margin-top: 1rem; text-align: left;">Contact Information</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" placeholder="Enter Email" value="<%=user.email%>" name="email" required>
+                    </div>
+                    <div class="col-4">
+                        <label for="mobile"><b>Mobile</b></label>
+                        <input type="text" placeholder="Enter Mobile" value="<%=user.mobile%>" name="mobile" required> 
+                    </div>
+                    <div class="col-4">
+                        <label for="address"><b>Address</b></label>
+                        <input type="text" placeholder="Enter address "value="<%=user.address%>" name="address" required> 
+                    </div>
+
+                    <h style="font-size: 30px; font-weight: 600; margin-bottom:15px; text-align: left;">Vital Sign</h>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="heart_rate"><b>Blood Pressure</b></label>
+                            <input type="text" placeholder="Enter Blood Pressure"value="<%=user.blood_pressure%>" name="blood_pressure" required>            
+                        </div>
+                        <div class="col-4">
+                            <label for="respiratory_rate"><b>Respiratory Rate</b></label>
+                            <input type="text" placeholder="Enter Respiratory Rate"value="<%=user.respiratory_rate%>" name="respiratory_rate" required>  
+                        </div>
+                        <div class="col-4">
+                            <label for="temperature"><b>Temperature</b></label>
+                            <input type="text" placeholder="Enter Temperature " value="<%=user.temperature%>" name="temperature" required>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="oxigen"><b>Oxigen</b></label>
+                            <input type="text" placeholder="Enter Oxigen "value="<%=user.oxigen%>" name="oxigen" required>            
+                        </div>
+                        <div class="col-4">
+                            <label for="height"><b>Height</b></label>
+                            <input type="text" placeholder="Enter Height "value="<%=user.height%>" name="height" required>  
+                        </div>
+                        <div class="col-4">
+                            <label for="weight"><b>Weight</b></label>
+                            <input type="text" placeholder="Enter Weight"value="<%=user.weight%>" name="weight" required>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                    <h1 style="font-size: 25px; font-weight: 600; margin-bottom:15px; margin-top: 1rem; text-align: left;">Diease / Medical History</h1>
+    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="death"><b>Emergency Case Death</b></label>
+                            <input type="text" placeholder="Enter yes / No "value="<%=user.death%>" name="death" required>            
+                        </div>
+                        <div class="col-6">
+                            <label for="bed_no"><b>Bed_no</b></label>
+                            <input type="text" placeholder="Enter bed_no "value="<%=user.bed_no%>" name="bed_no" required>  
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                          <label for="cars">Alergies</label>
+                          <select name="birth_type" id="cars" style="background-color: #F5F5F5; width: 100%;">
+                            <!-- <option value="null"></option> -->
+                            <option value="Drug">Drug </option>
+                            <option value="Food">Food </option>
+                            <option value="latex">latex </option>
+                            <option value="Other">Other</option>
+                          </select>
+                          <br><br>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
+                        <input type="hidden" name="user_id" value="<%=user._id%>">
+                    </div>
+
+                    <div class="clearfix">
+                      <button type="submit" class="signupbtn w-100">Save</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <% if(typeof message !=='undefined' ){ %>
+    <div class="container">
+      <div class="col-8 w-50" style="margin: 10px auto;">
+        <p style="color:white; padding: 2rem; background-color: blue; border-radius: 5px;">
+          <%= message %>
+        </p>
+      </div>
+    </div>
+    <% } %>
+
+      <%- include('../partials/adminsimfooter') -%>
